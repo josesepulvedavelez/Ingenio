@@ -30,6 +30,7 @@ namespace Ingenio.Data
 
         public async Task<int> AddClima(Clima clima)
         {
+            clima.FechaHora = DateTime.Now;
             var add = _IngenioConext.Clima.Add(clima);
             await _IngenioConext.SaveChangesAsync();
 
