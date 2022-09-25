@@ -34,7 +34,7 @@ namespace Ingenio.Data
                 .IsUnicode(false);
 
             modelBuilder.Entity<Usuario>()
-                .Property(e => e.Usuario1)
+                .Property(e => e.Usuariox)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Usuario>()

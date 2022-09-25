@@ -54,6 +54,7 @@
     <Compile Include="ClimaDAL.cs" />
     <Compile Include="IngenioConext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

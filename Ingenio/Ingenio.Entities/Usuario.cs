@@ -15,7 +15,7 @@ namespace Ingenio.Entities
 
         [Column("Usuario")]
         [StringLength(20)]
-        public string Usuario1 { get; set; }
+        public string Usuariox { get; set; }
 
         [StringLength(10)]
         public string Contraseña { get; set; }
