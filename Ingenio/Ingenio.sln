@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingenio.Entities", "Ingenio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingenio.Api", "Ingenio.Api\Ingenio.Api.csproj", "{4E458764-BB43-4291-BE47-B681133C14FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingenio.WebClient", "Ingenio.WebClient\Ingenio.WebClient.csproj", "{CC051080-43C9-4B8A-8FCB-822CE614A944}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4E458764-BB43-4291-BE47-B681133C14FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E458764-BB43-4291-BE47-B681133C14FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E458764-BB43-4291-BE47-B681133C14FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC051080-43C9-4B8A-8FCB-822CE614A944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC051080-43C9-4B8A-8FCB-822CE614A944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC051080-43C9-4B8A-8FCB-822CE614A944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC051080-43C9-4B8A-8FCB-822CE614A944}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

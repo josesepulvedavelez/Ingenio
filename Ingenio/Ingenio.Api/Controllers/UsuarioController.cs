@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace Ingenio.Api
+namespace Ingenio.Api.Controllers
 {
     public class UsuarioController : ApiController
     {
