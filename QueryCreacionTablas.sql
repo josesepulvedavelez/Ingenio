@@ -18,3 +18,7 @@ Create table Clima
 	Humendad float not null,
 	Viento varchar(10) not null
 );
+
+-- DATOS DE PRUEBA INICIAL
+
+Insert Into Usuario(Usuario, Contraseña) Values('admin', 'admin');

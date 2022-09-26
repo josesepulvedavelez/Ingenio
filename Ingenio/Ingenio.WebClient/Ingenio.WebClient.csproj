@@ -188,10 +188,10 @@
     <Content Include="Views\Clima\Nuevo.cshtml" />
     <Content Include="Views\Clima\Actualizar.cshtml" />
     <Content Include="Views\Clima\Eliminar.cshtml" />
+    <Content Include="Views\Usuario\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
