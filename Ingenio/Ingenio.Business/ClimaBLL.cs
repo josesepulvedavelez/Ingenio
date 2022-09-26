@@ -46,5 +46,11 @@ namespace Ingenio.Business
             return delete;
         }
 
+        public async Task<Clima> GetClima(int id)
+        {
+            var clima = await _climaDal.GetClima(id);
+            return clima;
+        }
+
     }
 }

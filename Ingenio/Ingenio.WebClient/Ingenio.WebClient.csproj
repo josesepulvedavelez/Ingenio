@@ -186,6 +186,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Clima\Index.cshtml" />
     <Content Include="Views\Clima\Nuevo.cshtml" />
+    <Content Include="Views\Clima\Actualizar.cshtml" />
+    <Content Include="Views\Clima\Eliminar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

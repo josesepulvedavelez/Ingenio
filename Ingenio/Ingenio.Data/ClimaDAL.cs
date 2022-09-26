@@ -61,5 +61,11 @@ namespace Ingenio.Data
             return id;
         }
 
+        public async Task<Clima> GetClima(int id)
+        {
+            var clima = await _IngenioConext.Clima.FirstOrDefaultAsync(c=> c.Id == id);
+            return clima;
+        }
+  
     }
 }

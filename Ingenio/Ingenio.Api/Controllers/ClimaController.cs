@@ -50,5 +50,12 @@ namespace Ingenio.Api.Controllers
             var delete = await _climaBLL.DeleteClima(id);
             return delete;
         }
+
+        public async Task<Clima> GetClima(int id)
+        {
+            var clima = await _climaBLL.GetClima(id);
+            return clima;
+        }
+
     }
 }

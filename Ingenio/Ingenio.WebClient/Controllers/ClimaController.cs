@@ -65,5 +65,92 @@ namespace Ingenio.WebClient.Controllers
             return View(clima);
         }
 
+        public ActionResult Actualizar(int id)
+        {
+            Clima clima = null;
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseUrl);
+                var responseTask = client.GetAsync("Api/Clima/" + id.ToString());
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<Clima>();
+                    readTask.Wait();
+                    clima = readTask.Result;
+                }
+            }
+
+            return View(clima);
+        }
+
+        [HttpPost]
+        public ActionResult Actualizar(int id, Clima clima)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseUrl);
+                var putTask = client.PutAsJsonAsync($"Api/Clima/{clima.Id}", clima);
+                putTask.Wait();
+
+                var result = putTask.Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    return Redirect("Index");
+                }
+            }
+
+            return View(clima);
+        }
+
+        public ActionResult Eliminar(int id)
+        {
+            Clima clima = null;
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseUrl);
+                var responseTask = client.GetAsync("Api/Clima/" + id.ToString());
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<Clima>();
+                    readTask.Wait();
+                    clima = readTask.Result;
+                }
+            }
+
+            return View(clima);
+        }
+
+        [HttpPost]
+        public ActionResult Eliminar(Clima clima, int id)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseUrl);
+
+                var deleteTask = client.DeleteAsync($"Api/Clima/" + id.ToString());
+                deleteTask.Wait();
+
+                var result = deleteTask.Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index");
+                }
+            }
+
+            return View(clima);
+        }
+
     }
 }
