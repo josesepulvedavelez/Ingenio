@@ -20,18 +20,19 @@ namespace Ingenio.WebClient.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Login(Usuario usuario)
+        public ActionResult Login(Usuario usuario)
         {
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri(baseUrl);
-                var postTask = client.PostAsJsonAsync<Usuario>("Api/Usuario", usuario);
-                
-                postTask.Wait();
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(baseUrl);
 
+            if (ModelState.IsValid)
+            {
+                var postTask = client.PostAsJsonAsync<Usuario>("Api/Usuario", usuario);
                 var result = postTask.Result;
 
-                if (result.IsSuccessStatusCode)
+                var validacion = (bool)result.Content.ReadAsAsync<bool>().Result;
+
+                if (validacion)
                 {
                     return RedirectToAction("Index", "Clima");
                 }
