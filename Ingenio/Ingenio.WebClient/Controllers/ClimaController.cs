@@ -101,7 +101,7 @@ namespace Ingenio.WebClient.Controllers
 
                 if (result.IsSuccessStatusCode)
                 {
-                    return Redirect("Index");
+                    return RedirectToAction("Index");
                 }
             }
 
